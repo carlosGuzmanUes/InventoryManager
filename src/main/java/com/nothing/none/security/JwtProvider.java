@@ -57,7 +57,7 @@ public class JwtProvider {
     return getClaims(token).getSubject();
   }
 
-    private boolean isExpired(String token) {
+    boolean isExpired(String token) {
     return getClaims(token)
         .getExpiration()
         .before(new Date());
